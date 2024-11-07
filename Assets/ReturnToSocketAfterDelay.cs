@@ -4,10 +4,7 @@ using System.Collections;
 
 public class ReturnToSocketAfterDelay : MonoBehaviour
 {
-    private Vector3 originalPosition;
-    private Quaternion originalRotation;
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable;
-    private Transform socketTransform;
     public GameObject socket;
 
     [SerializeField] private float returnDelay = 2f; // Delay before returning in seconds
@@ -15,11 +12,7 @@ public class ReturnToSocketAfterDelay : MonoBehaviour
     void Start()
     {
         grabInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
-        
-        originalPosition = transform.position;
-        originalRotation = transform.rotation;
 
-      
         grabInteractable.selectExited.AddListener(StartReturnCoroutine);
     }
 
