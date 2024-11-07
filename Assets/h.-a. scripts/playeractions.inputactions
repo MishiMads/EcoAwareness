@@ -1,0 +1,34 @@
+{
+    "name": "playeractions",
+    "maps": [
+        {
+            "name": "interact",
+            "id": "d80be00d-8ca3-4a9f-893d-9f41ed49dac6",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "4c9a564a-80bc-4fd6-9a2e-81e23548345d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "6d741f90-5858-4d3e-aeae-c39f5566b37e",
+                    "path": "<Keyboard>/#(B)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
