@@ -28,7 +28,7 @@ public class Dialogue : MonoBehaviour
     private InputAction nextLineAction; //i need this for the input system to work
 
     
-    private bool isImage = false;
+    //private bool isImage = false;
     private Sprite imageToLoad;
 
     private void Awake()
