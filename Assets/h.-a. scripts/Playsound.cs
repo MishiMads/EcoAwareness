@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//This script is for playing sounds upon the player entering or exiting and are
+//for a script that plays a sound upon being called see SoundEffect
 public class Playsound : MonoBehaviour
 {
     public AudioSource audioSource;

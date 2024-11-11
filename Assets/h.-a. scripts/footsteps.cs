@@ -23,10 +23,13 @@ public class footsteps : MonoBehaviour
 
  void Update()
  {
+  //compares the distance moved to the movement threshold
   float distanceMoved = Vector3.Distance(transform.position, lastPosition);
   timeSinceLastStep += Time.deltaTime;
 
-  
+  //if the distance moved is greather than the threshold and the interval between 
+  //steps has elapsed then the function which plays a footstep sound is called and the
+  //timer is reset
   if (distanceMoved > movementThreshold && timeSinceLastStep >= stepInterval)
   {
    PlayFootstepSound();
