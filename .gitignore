@@ -70,3 +70,11 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+Assets/3D assets/
+
+Assets/Low Poly Simple Urban City 3D Asset Pack/Models/Props/Other/Tree_1.fbx
+
+Assets/Low Poly Simple Urban City 3D Asset Pack/Models/Props/Other/Tree_1.fbx.meta
+
+*.meta
