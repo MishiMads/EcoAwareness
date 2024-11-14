@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Default ignored files
 /shelf/
 /workspace.xml
@@ -5,6 +6,15 @@
 /contentModel.xml
 /modules.xml
 /projectSettingsUpdater.xml
+=======
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/projectSettingsUpdater.xml
+/modules.xml
+/contentModel.xml
+>>>>>>> origin/MadsHA
 /.idea.EcoAwareness.iml
 # Editor-based HTTP Client requests
 /httpRequests/

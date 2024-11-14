@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class patrol : MonoBehaviour
 {
+    
     public float speed = 2f;
     
     //the start position is the position of the npc when the game starts
@@ -14,6 +15,7 @@ public class patrol : MonoBehaviour
     private Vector3 goalPosition;
     //this gameobject is what the npc will walk toward from its start position
     public GameObject goal;
+    private GameObject LookingAt;
     void Start()
     {
         //recording positions. Note you cannot curently change what positions the npc walk between while the game is running
@@ -52,8 +54,12 @@ public class patrol : MonoBehaviour
             }
 
         }
-
-
+ //This part of the script allows the npc to look at the player regards of where inside the speech collider the player walks
+ 
+        if (!move)
+        {
+            rotate(LookingAt.transform.position);
+        }
     }
     //this function orients the npc in the direction of the designated transform
     private void rotate(Vector3 target)
@@ -66,6 +72,7 @@ public class patrol : MonoBehaviour
     public void stopAndLook(GameObject look)
     {
         move = false;
+        LookingAt = look;
         Vector3 lookPosition = look.transform.position;
         rotate(lookPosition);
     }
@@ -79,6 +86,7 @@ public class patrol : MonoBehaviour
     private IEnumerator Resuming()
     {
         yield return new WaitForSeconds(0.5f);
+        move = true;
         switch (moveforward)
         {
             case true:
@@ -90,7 +98,7 @@ public class patrol : MonoBehaviour
             
         }
 
-        move = true;
+        
     }
 }
     
