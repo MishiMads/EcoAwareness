@@ -52,15 +52,15 @@ MonoBehaviour:
   HMD: {fileID: 0}
   bodySockets:
   - gameObject: {fileID: 4287736024614220644}
-    heightRatio: 0.55
+    heightRatio: 0.45
   - gameObject: {fileID: 5598361597261683600}
-    heightRatio: 0.55
+    heightRatio: 0.45
   - gameObject: {fileID: 9045498117602448101}
-    heightRatio: 0.55
+    heightRatio: 0.45
   - gameObject: {fileID: 686218961046130513}
-    heightRatio: 0.55
+    heightRatio: 0.45
   - gameObject: {fileID: 2761253228120914571}
-    heightRatio: 0.55
+    heightRatio: 0.45
 --- !u!1 &2249430544976703091
 GameObject:
   m_ObjectHideFlags: 0
