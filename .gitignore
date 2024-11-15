@@ -77,4 +77,4 @@ crashlytics-build.properties
 
 # Assets/Low Poly Simple Urban City 3D Asset Pack/Models/Props/Other/Tree_1.fbx.meta
 
-*.meta
+# *.meta
