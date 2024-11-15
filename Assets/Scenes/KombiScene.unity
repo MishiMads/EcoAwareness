@@ -2650,7 +2650,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 30.53743, y: 0.5, z: 29.895535}
-  m_Center: {x: 0, y: 0.1, z: 0}
+  m_Center: {x: 0, y: 0.3, z: 0}
 --- !u!1001 &359449387
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10038,7 +10038,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1783031063086522942, guid: bfe9763aeb5366742a7f5eda95dbeefd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.49
+      value: 4.92
       objectReference: {fileID: 0}
     - target: {fileID: 1783031063086522942, guid: bfe9763aeb5366742a7f5eda95dbeefd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10072,10 +10072,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7407583001418879975, guid: bfe9763aeb5366742a7f5eda95dbeefd, type: 3}
+      propertyPath: rotationLagFactor
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7271928356358398264, guid: bfe9763aeb5366742a7f5eda95dbeefd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1864423021}
   m_SourcePrefab: {fileID: 100100000, guid: bfe9763aeb5366742a7f5eda95dbeefd, type: 3}
 --- !u!1 &1388063327
 GameObject:
@@ -13605,6 +13612,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7929117593904950834, guid: a07b11262c7b52a4688f5ab013a731b9, type: 3}
   m_PrefabInstance: {fileID: 1825719750}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1864423018 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7271928356358398264, guid: bfe9763aeb5366742a7f5eda95dbeefd, type: 3}
+  m_PrefabInstance: {fileID: 1369781102}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1864423021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864423018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c855538853226ef44813b73bf9af2137, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shovel: {fileID: 2080215881}
+  DirtMoundPrefab: {fileID: 0}
+  PlayerHand: {fileID: 0}
 --- !u!1001 &1893747315
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15255,6 +15282,11 @@ Transform:
   - {fileID: 181491841}
   m_Father: {fileID: 1171828379}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2080215881 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5575083232669086533, guid: bfe9763aeb5366742a7f5eda95dbeefd, type: 3}
+  m_PrefabInstance: {fileID: 1369781102}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2104179155
 PrefabInstance:
   m_ObjectHideFlags: 0
