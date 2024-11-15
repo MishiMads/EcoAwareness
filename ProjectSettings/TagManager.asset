@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Seed3
+  - Seed1
+  - Seed2
+  - Anchor
+  - Ground
   layers:
   - Default
   - TransparentFX
