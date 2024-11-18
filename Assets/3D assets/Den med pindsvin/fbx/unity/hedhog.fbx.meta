@@ -3,7 +3,12 @@ guid: 6afce892340f22c4bb6b5cf9e75ef7a5
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wild_animals_map
+    second: {fileID: 2100000, guid: 64ca11fe04428984ca5a37e41e7acb4f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
