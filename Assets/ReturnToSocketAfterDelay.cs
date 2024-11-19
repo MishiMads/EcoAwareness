@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using System.Collections;
@@ -21,14 +22,20 @@ public class ReturnToSocketAfterDelay : MonoBehaviour
 
         grabInteractable.selectExited.AddListener(StartReturnCoroutine);
 
+       
+    }
+
+    private void Update()
+    {
         if (anchorPoint != null)
         {
             if (interactable.listener == true)
             {
                 UseAnchorPoint();
+                Debug.Log("virker 2");
             }
         }
-        
+
     }
 
     private void StartReturnCoroutine(SelectExitEventArgs args)
