@@ -36,9 +36,7 @@ public class ShovelCollider : MonoBehaviour
                 {
                     Debug.Log($"There is already a SoilObject there!");
                 }
-                
-                // Check if we collided with the ground
-                if (collision.gameObject == Ground)
+                else if (collision.gameObject == Ground) // Check if we collided with the ground
                 {
                     inGround = true;
                 
