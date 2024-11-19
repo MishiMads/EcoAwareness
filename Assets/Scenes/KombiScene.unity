@@ -8095,26 +8095,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 509476069272640376, guid: 6031dfe2c4199544b959cd78f8dfbd7d, type: 3}
-      propertyPath: m_AttachTransform
-      value: 
-      objectReference: {fileID: 1821811297}
-    - target: {fileID: 509476069272640376, guid: 6031dfe2c4199544b959cd78f8dfbd7d, type: 3}
-      propertyPath: m_InteractionManager
-      value: 
-      objectReference: {fileID: 1015589541}
     - target: {fileID: 722102092736019979, guid: 6031dfe2c4199544b959cd78f8dfbd7d, type: 3}
       propertyPath: m_Name
       value: OriginPrefab
       objectReference: {fileID: 0}
-    - target: {fileID: 1243982786493688062, guid: 6031dfe2c4199544b959cd78f8dfbd7d, type: 3}
-      propertyPath: m_AttachTransform
-      value: 
-      objectReference: {fileID: 1614519777}
-    - target: {fileID: 1243982786493688062, guid: 6031dfe2c4199544b959cd78f8dfbd7d, type: 3}
-      propertyPath: m_InteractionManager
-      value: 
-      objectReference: {fileID: 1015589541}
     - target: {fileID: 2622753237714191245, guid: 6031dfe2c4199544b959cd78f8dfbd7d, type: 3}
       propertyPath: m_AttachTransform
       value: 
@@ -12260,23 +12244,6 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 6558622148059887818, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  pokeAction:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Poke
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 7b93986f-8e12-4206-9c74-0d19a7bc661e
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 71106601250685021, guid: c348712bda248c246b8c49b3db54643f, type: 3}
---- !u!4 &1614519777 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400012, guid: ca20b3907ff1c794cb89c1ad2cce8282, type: 3}
-  m_PrefabInstance: {fileID: 1614519773}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1615888821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12377,19 +12344,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011301888654, guid: 50cff2be1c49d2849847717bf4d6b1d4, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5
+      value: 0.56098557
       objectReference: {fileID: 0}
     - target: {fileID: 4000011301888654, guid: 50cff2be1c49d2849847717bf4d6b1d4, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.5
+      value: -0.56098557
       objectReference: {fileID: 0}
     - target: {fileID: 4000011301888654, guid: 50cff2be1c49d2849847717bf4d6b1d4, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.5
+      value: 0.4304593
       objectReference: {fileID: 0}
     - target: {fileID: 4000011301888654, guid: 50cff2be1c49d2849847717bf4d6b1d4, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.5
+      value: 0.4304593
       objectReference: {fileID: 0}
     - target: {fileID: 4000011301888654, guid: 50cff2be1c49d2849847717bf4d6b1d4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -12401,7 +12368,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011301888654, guid: 50cff2be1c49d2849847717bf4d6b1d4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 114000013382156852, guid: 50cff2be1c49d2849847717bf4d6b1d4, type: 3}
       propertyPath: m_Enabled
@@ -13902,23 +13869,6 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: -1758520528963094988, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  pokeAction:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Poke
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 7b572903-45f1-447e-ad94-6a73a8219182
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: -5908353012961274365, guid: c348712bda248c246b8c49b3db54643f, type: 3}
---- !u!4 &1821811297 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400012, guid: d0c255d07fd68f14b94e55d388e7e6bb, type: 3}
-  m_PrefabInstance: {fileID: 1821811293}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1825719750
 PrefabInstance:
   m_ObjectHideFlags: 0
