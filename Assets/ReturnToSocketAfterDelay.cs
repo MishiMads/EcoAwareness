@@ -1,10 +1,14 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using System.Collections;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class ReturnToSocketAfterDelay : MonoBehaviour
 {
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable;
+
+    private XRGrabInteractable interactable;
+    
     public GameObject socket;
     
     public GameObject anchorPoint;
@@ -19,7 +23,10 @@ public class ReturnToSocketAfterDelay : MonoBehaviour
 
         if (anchorPoint != null)
         {
-            grabInteractable.selectEntered.AddListener(UseAnchorPoint);
+            if (interactable.listener == true)
+            {
+                UseAnchorPoint();
+            }
         }
         
     }
@@ -30,12 +37,14 @@ public class ReturnToSocketAfterDelay : MonoBehaviour
         StartCoroutine(ReturnToSocketWithDelay());
     }
     
-    private void UseAnchorPoint(SelectEnterEventArgs args)
+    private void UseAnchorPoint()
     {
         transform.position = anchorPoint.transform.position;
         transform.rotation = anchorPoint.transform.rotation;
         
         Debug.Log("virker");
+
+        interactable.listener = false;
     }
 
     private IEnumerator ReturnToSocketWithDelay()
