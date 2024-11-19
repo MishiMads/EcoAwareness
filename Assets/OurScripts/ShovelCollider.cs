@@ -6,7 +6,7 @@ using UnityEngine.Serialization;
 public class ShovelCollider : MonoBehaviour
 {
     
-    [FormerlySerializedAs("shovel")] public GameObject shovelTip; // Reference to the shovel 
+    public GameObject shovelTip; // Reference to the shovel 
     public GameObject SoilObject; // Reference to the SoilObject 
     
     //Holds the coordinates of where tho shovel collides with the ground. 
@@ -29,10 +29,10 @@ public class ShovelCollider : MonoBehaviour
             // Check if we collided with the ground
             if (collision.gameObject.CompareTag("Ground"))
             {
-                Debug.Log(collision.gameObject.tag);
+                Debug.Log($"Collision with: {collision.gameObject.name}");
                 // Save the first contact point
                 collisionPoint = collision.contacts[0].point;
-                Debug.Log(collisionPoint);
+                Debug.Log($"Collided with Ground at point: {collision.contacts[0].point}");
                 Instantiate(SoilObject, collisionPoint, Quaternion.identity);
             }
         }
