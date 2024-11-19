@@ -13,9 +13,11 @@ public class ShovelCollider : MonoBehaviour
     
     //Holds the coordinates of where tho shovel collides with the ground. 
     private Vector3 collisionPoint;
+    private float timer = 3f; 
 
     private bool inGround;
-    private bool thereIsNoSoil = true;
+    private bool delayStarted;
+    //private bool thereIsNoSoil = true;
 
     // Update is called once per frame
         void Update()
@@ -30,7 +32,7 @@ public class ShovelCollider : MonoBehaviour
         
         private void OnCollisionEnter(Collision collision)
         {
-            //Check if the shovel is already in the ground
+            /*Check if the shovel is already in the ground
             if (inGround == false)
             {
                 //Chechk if shovel collides with Soil
@@ -39,10 +41,10 @@ public class ShovelCollider : MonoBehaviour
                     thereIsNoSoil = false;
                     Debug.Log($"There is already a SoilObject there!");
                 }
-            }
+            }*/
             
-            //Check if the shovel is already in the ground and there is not a Soil Object already
-            if (inGround == false && thereIsNoSoil == true)
+            //Check if the shovel is already in the ground 
+            if (inGround == false && delayStarted == false)
             {
                 // Check if we collided with the ground
                 if (collision.gameObject == Ground) 
@@ -70,7 +72,22 @@ public class ShovelCollider : MonoBehaviour
             if (collision.gameObject == Ground)
             {
                 inGround = false;
-                thereIsNoSoil = true;
+                delayStarted = true;
+                Timer();
+                //thereIsNoSoil = true;
+            }
+        }
+
+        private void Timer()
+        {
+            if (delayStarted == true)
+            {
+                timer += Time.deltaTime;
+            }
+
+            if (timer >= 3f)
+            {
+                delayStarted = false;
             }
         }
 }
