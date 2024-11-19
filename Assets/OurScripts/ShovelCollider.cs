@@ -15,6 +15,7 @@ public class ShovelCollider : MonoBehaviour
     private Vector3 collisionPoint;
 
     private bool inGround;
+    private bool thereIsNoSoil = true;
 
     // Update is called once per frame
         void Update()
@@ -32,11 +33,19 @@ public class ShovelCollider : MonoBehaviour
             //Check if the shovel is already in the ground
             if (inGround == false)
             {
+                //Chechk if shovel collides with Soil
                 if (collision.gameObject == SoilObject)
                 {
+                    thereIsNoSoil = false;
                     Debug.Log($"There is already a SoilObject there!");
                 }
-                else if (collision.gameObject == Ground) // Check if we collided with the ground
+            }
+            
+            //Check if the shovel is already in the ground and there is not a Soil Object already
+            if (inGround == false && thereIsNoSoil == true)
+            {
+                // Check if we collided with the ground
+                if (collision.gameObject == Ground) 
                 {
                     inGround = true;
                 
@@ -61,6 +70,7 @@ public class ShovelCollider : MonoBehaviour
             if (collision.gameObject == Ground)
             {
                 inGround = false;
+                thereIsNoSoil = true;
             }
         }
 }
