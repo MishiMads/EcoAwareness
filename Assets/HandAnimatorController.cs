@@ -8,7 +8,6 @@ public class HandAnimatorController : MonoBehaviour
 {
     [SerializeField] private InputActionProperty triggerAction;
     [SerializeField] private InputActionProperty gripAction;
-    [SerializeField] private InputActionProperty pokeAction;
 
     private Animator animator;
 
@@ -21,10 +20,8 @@ public class HandAnimatorController : MonoBehaviour
     {
         float triggerValue = triggerAction.action.ReadValue<float>();
         float gripValue = gripAction.action.ReadValue<float>();
-        float pokeValue = pokeAction.action.ReadValue<float>();
-        
+
         animator.SetFloat("Trigger", triggerValue);
         animator.SetFloat("Grip", gripValue);
-        animator.SetFloat("Poke", pokeValue);
     }
 }
