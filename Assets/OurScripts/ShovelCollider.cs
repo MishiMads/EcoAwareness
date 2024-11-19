@@ -12,11 +12,6 @@ public class ShovelCollider : MonoBehaviour
     //Holds the coordinates of where tho shovel collides with the ground. 
     private Vector3 collisionPoint; 
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
         void Update()
@@ -34,8 +29,10 @@ public class ShovelCollider : MonoBehaviour
             // Check if we collided with the ground
             if (collision.gameObject.CompareTag("Ground"))
             {
+                Debug.Log(collision.gameObject.tag);
                 // Save the first contact point
                 collisionPoint = collision.contacts[0].point;
+                Debug.Log(collisionPoint);
                 Instantiate(SoilObject, collisionPoint, Quaternion.identity);
             }
         }
