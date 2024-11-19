@@ -1,9 +1,11 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ShovelTrigger : MonoBehaviour
 {
     public GameObject shovelTip; // Reference to the shovel tip
     public GameObject SoilObject; // Reference to the SoilObject prefab
+    public GameObject Ground;
 
     private Vector3 collisionPoint; // Holds the coordinates of collision
 
@@ -19,18 +21,20 @@ public class ShovelTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Ground"))
+        if (other.gameObject == Ground)
         {
-            Debug.Log($"Trigger detected with: {other.gameObject.name}");
+            Debug.Log($"Trigger detected with Ground");
             
-            // Save the collision point and instantiate the soil object
+            // Save the collision point 
             collisionPoint = transform.position; 
             Debug.Log($"Ground trigger at position: {transform.position}");
+            
+            //Instantiate the soil object at collision point
             Instantiate(SoilObject, collisionPoint, Quaternion.identity);
         }
         else
         {
-            Debug.Log($"Did not trigger with ground");
+            Debug.Log($"Did not trigger with Ground");
         }
     }
 }
