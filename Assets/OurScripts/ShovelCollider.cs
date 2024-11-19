@@ -7,7 +7,8 @@ public class ShovelCollider : MonoBehaviour
 {
     
     public GameObject shovelTip; // Reference to the shovel 
-    public GameObject SoilObject; // Reference to the SoilObject 
+    public GameObject SoilObject; // Reference to the SoilObject
+    public GameObject Ground; //Reference to Ground
     
     //Holds the coordinates of where tho shovel collides with the ground. 
     private Vector3 collisionPoint; 
@@ -27,13 +28,20 @@ public class ShovelCollider : MonoBehaviour
         private void OnCollisionEnter(Collision collision)
         {
             // Check if we collided with the ground
-            if (collision.gameObject.CompareTag("Ground"))
+            if (collision.gameObject == Ground)
             {
-                Debug.Log($"Collision with: {collision.gameObject.name}");
+                Debug.Log($"Collision with Ground");
+                
                 // Save the first contact point
                 collisionPoint = collision.contacts[0].point;
                 Debug.Log($"Collided with Ground at point: {collision.contacts[0].point}");
+                
+                //Instantiate SoilObject at collisionPoint
                 Instantiate(SoilObject, collisionPoint, Quaternion.identity);
+            }
+            else
+            {
+                Debug.Log($"Did not collide with Ground");
             }
         }
 }
