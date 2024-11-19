@@ -6,6 +6,8 @@ public class ReturnToSocketAfterDelay : MonoBehaviour
 {
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable;
     public GameObject socket;
+    
+    public GameObject anchorPoint;
 
     [SerializeField] private float returnDelay = 2f; // Delay before returning in seconds
 
@@ -14,12 +16,24 @@ public class ReturnToSocketAfterDelay : MonoBehaviour
         grabInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
 
         grabInteractable.selectExited.AddListener(StartReturnCoroutine);
+
+        if (anchorPoint != null)
+        {
+            grabInteractable.selectEntered.AddListener(UseAnchorPoint);
+        }
+        
     }
 
     private void StartReturnCoroutine(SelectExitEventArgs args)
     {
         // Start the return coroutine with a delay when the object is released
         StartCoroutine(ReturnToSocketWithDelay());
+    }
+    
+    private void UseAnchorPoint(SelectEnterEventArgs args)
+    {
+        transform.position = anchorPoint.transform.position;
+        transform.rotation = anchorPoint.transform.rotation;
     }
 
     private IEnumerator ReturnToSocketWithDelay()
