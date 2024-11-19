@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class ShovelCollider : MonoBehaviour
 {
     
-    public GameObject shovel; // Reference to the shovel 
+    [FormerlySerializedAs("shovel")] public GameObject shovelTip; // Reference to the shovel 
     public GameObject SoilObject; // Reference to the SoilObject 
     
     //Holds the coordinates of where tho shovel collides with the ground. 
@@ -20,11 +21,11 @@ public class ShovelCollider : MonoBehaviour
     // Update is called once per frame
         void Update()
         {
-            if (shovel != null)
+            if (shovelTip != null)
             {
                 // Update the position and rotation to match the shovel
-                transform.position = shovel.transform.position;
-                transform.rotation = shovel.transform.rotation;
+                transform.position = shovelTip.transform.position;
+                transform.rotation = shovelTip.transform.rotation;
             }
         }
         
