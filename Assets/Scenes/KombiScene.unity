@@ -8102,7 +8102,7 @@ PrefabInstance:
     - target: {fileID: 2622753237714191245, guid: 6031dfe2c4199544b959cd78f8dfbd7d, type: 3}
       propertyPath: m_AttachTransform
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 16309219}
     - target: {fileID: 3597732883168671686, guid: 6031dfe2c4199544b959cd78f8dfbd7d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
