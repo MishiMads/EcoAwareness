@@ -1,18 +1,33 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class HedgehogAnimation : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Animator hedgehogAnim;
+
+    public void Start()
     {
-        
+        hedgehogAnim.SetBool("IsWalking",true);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        //Debug.Log("collision");
+        if (other.gameObject.CompareTag("Player"))
+        {
+           hedgehogAnim.SetBool("IsWalking",false);
+        }
     }
+    private void OnTriggerExit(Collider other)
+    {
+        //Debug.Log("collision");
+        if (other.gameObject.CompareTag("Player"))
+        {
+            hedgehogAnim.SetBool("IsWalking",true);
+        }
+    }
+
+
 }
