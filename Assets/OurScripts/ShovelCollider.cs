@@ -28,7 +28,7 @@ public class ShovelCollider : MonoBehaviour
         if (delayStarted)
         {
             timer += Time.deltaTime; // Increment the timer
-            if (timer >= 3f)
+            if (timer >= 1f)
             {
                 delayStarted = false; // End the delay
                 timer = 0f;           // Reset the timer
