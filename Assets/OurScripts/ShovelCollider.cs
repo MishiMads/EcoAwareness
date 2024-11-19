@@ -6,88 +6,67 @@ using UnityEngine.Serialization;
 
 public class ShovelCollider : MonoBehaviour
 {
-    
     public GameObject shovelTip; // Reference to the shovel 
     public GameObject SoilObject; // Reference to the SoilObject
-    public GameObject Ground; //Reference to Ground
-    
-    //Holds the coordinates of where tho shovel collides with the ground. 
-    private Vector3 collisionPoint;
-    private float timer = 3f; 
+    public GameObject Ground; // Reference to Ground
 
-    private bool inGround;
-    private bool delayStarted;
-    //private bool thereIsNoSoil = true;
+    private Vector3 collisionPoint; // Holds the coordinates of where the shovel collides with the ground
+    private float timer = 0f; 
+    private bool inGround = false; 
+    private bool delayStarted = false;
 
-    // Update is called once per frame
-        void Update()
+    void Update()
+    {
+        // Follow the shovel position and rotation
+        if (shovelTip != null)
         {
-            if (shovelTip != null)
-            {
-                // Update the position and rotation to match the shovel
-                transform.position = shovelTip.transform.position;
-                transform.rotation = shovelTip.transform.rotation;
-            }
-        }
-        
-        private void OnCollisionEnter(Collision collision)
-        {
-            /*Check if the shovel is already in the ground
-            if (inGround == false)
-            {
-                //Chechk if shovel collides with Soil
-                if (collision.gameObject == SoilObject)
-                {
-                    thereIsNoSoil = false;
-                    Debug.Log($"There is already a SoilObject there!");
-                }
-            }*/
-            
-            //Check if the shovel is already in the ground 
-            if (inGround == false && delayStarted == false)
-            {
-                // Check if we collided with the ground
-                if (collision.gameObject == Ground) 
-                {
-                    inGround = true;
-                
-                    Debug.Log($"Collision with Ground");
-                
-                    // Save the first contact point
-                    collisionPoint = collision.contacts[0].point;
-                    Debug.Log($"Collided with Ground at point: {collision.contacts[0].point}");
-                
-                    //Instantiate SoilObject at collisionPoint
-                    Instantiate(SoilObject, collisionPoint, Quaternion.identity);
-                }
-                else
-                {
-                    Debug.Log($"Did not collide with Ground");
-                }
-            }
+            transform.position = shovelTip.transform.position;
+            transform.rotation = shovelTip.transform.rotation;
         }
 
-        private void OnCollisionExit(Collision collision)
+        // Timer logic
+        if (delayStarted)
         {
-            if (collision.gameObject == Ground)
-            {
-                inGround = false;
-                delayStarted = true;
-                Timer();
-                //thereIsNoSoil = true;
-            }
-        }
-
-        private void Timer()
-        {
-            if (delayStarted == true)
-            {
-                timer += Time.deltaTime;
-            }
-
+            timer += Time.deltaTime; // Increment the timer
             if (timer >= 3f)
             {
-                delayStarted = false;
+                delayStarted = false; // End the delay
+                timer = 0f;           // Reset the timer
             }
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (!inGround && !delayStarted)
+        {
+            // Check if we collided with the ground
+            if (collision.gameObject == Ground)
+            {
+                inGround = true; // Mark as in the ground
+                Debug.Log($"Collision with Ground");
+
+                // Save the first contact point
+                collisionPoint = collision.contacts[0].point;
+                Debug.Log($"Collided with Ground at point: {collision.contacts[0].point}");
+
+                // Instantiate SoilObject at collisionPoint
+                Instantiate(SoilObject, collisionPoint, Quaternion.identity);
+            }
+            else
+            {
+                Debug.Log($"Did not collide with Ground");
+            }
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject == Ground)
+        {
+            inGround = false;     // No longer in the ground
+            delayStarted = true;  // Start the delay
+        }
+    }
 }
+
