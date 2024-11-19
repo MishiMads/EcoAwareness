@@ -34,6 +34,8 @@ public class ReturnToSocketAfterDelay : MonoBehaviour
     {
         transform.position = anchorPoint.transform.position;
         transform.rotation = anchorPoint.transform.rotation;
+        
+        Debug.Log("virker");
     }
 
     private IEnumerator ReturnToSocketWithDelay()
