@@ -6,7 +6,7 @@ public class UIFloat : MonoBehaviour
 {
 
     public Transform target;// The target GameObject the UI element will float above
-    public Vector3 worldOffset = new Vector3(0.1f, 2, 0); // Offset to position UI above target
+    public Vector3 worldOffset = new Vector3(0, 10, 0); // Offset to position UI above target
     public Transform UItransform; // Transform of the UI element
     public Camera mainCamera; // The camera the player uses
     
