@@ -67,8 +67,9 @@ public class patrol : MonoBehaviour
         Vector3 direction = (target - transform.position).normalized;
         
         //lock x-rotation
-        direction.x = 0f;
-        
+        direction.y = 0f;
+    
+
         //Ensure the direction is normalized again after turning it zero??
         direction.Normalize();
         
