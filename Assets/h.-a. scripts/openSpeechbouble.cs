@@ -10,6 +10,7 @@ public class openSpeechbouble : MonoBehaviour
     public string[] Replilk;
     public UIFloat uifloat;
     public patrol Patrol;
+    public bool IsTalking=false;
     
     public Transform ThisTarget;
     
@@ -19,6 +20,7 @@ public class openSpeechbouble : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Patrol.stopAndLook(other.gameObject);
+            IsTalking = true;
             Debug.Log("player entered");
             StartCoroutine(HandleDialogue());
         }
@@ -29,6 +31,7 @@ public class openSpeechbouble : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("play left");
+            IsTalking = false;
             speech.gameObject.SetActive(false);
             Patrol.resume();
         }
