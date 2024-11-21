@@ -9,6 +9,9 @@ TagManager:
   - Seed2
   - Anchor
   - Ground
+  - ButterflySeed
+  - HedgehogSeed
+  - BeeSeed
   layers:
   - Default
   - TransparentFX
