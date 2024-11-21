@@ -104,7 +104,7 @@ public class TimeTravel : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         // Check if the colliding object is the right hand
-        if (other.gameObject == rightHand.GetComponent<Collider>().gameObject)
+        if (other.gameObject == rightHand.GetComponent<Collider>().gameObject && canTravel==true)
         {
             Debug.Log("Hand and watch collision detected, transitioning scenes.");
             StartCoroutine(TimeTravelling());
