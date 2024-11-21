@@ -13,7 +13,7 @@ public class WatchScenetransition : MonoBehaviour
     private const int futureSceneIndex = 2;
     public RawImage fadeOutUIImage;
     private float fadeSpeed = 2f;
-
+    
     //Gameobjects to detect collisions between the righthand and watch for scene transitions
     public GameObject rightHand; 
     public GameObject watch;          
