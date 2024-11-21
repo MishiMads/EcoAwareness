@@ -8,7 +8,7 @@ public class TimeTravel : MonoBehaviour
     // Scene indexes for transitions
     private const int pastSceneIndex = 1;
     private const int futureSceneIndex = 2;
-    private bool canTravel = false;
+    public bool canTravel = false;
 
     // Plane for fade effect
     public GameObject fadePlane; 
@@ -27,6 +27,8 @@ public class TimeTravel : MonoBehaviour
 
     private void Awake()
     {
+        StartCoroutine(TravelDelay());
+        
         // Get the material attached to the plane
         if (fadePlane != null)
         {
@@ -44,6 +46,7 @@ public class TimeTravel : MonoBehaviour
         {
             Debug.LogError("FadePlane GameObject is not assigned.");
         }
+        
     }
 
     private void OnEnable()
