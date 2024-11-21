@@ -8,6 +8,7 @@ public class TimeTravel : MonoBehaviour
     // Scene indexes for transitions
     private const int pastSceneIndex = 1;
     private const int futureSceneIndex = 2;
+    private bool canTravel = false;
 
     // Plane for fade effect
     public GameObject fadePlane; 
@@ -127,9 +128,18 @@ public class TimeTravel : MonoBehaviour
         }
         yield return null;
     }
-
-    public void LoadScene(int scene)
+    
+    
+    public void LoadScene(int Scene)
     {
-        SceneManager.LoadScene(sceneBuildIndex: scene);
+        SceneManager.LoadScene(sceneBuildIndex: Scene);
+    }
+    private IEnumerator TravelDelay()
+    {
+        // Wait for 5 seconds
+        yield return new WaitForSeconds(5f);
+
+        
+        canTravel = true;
     }
 }
