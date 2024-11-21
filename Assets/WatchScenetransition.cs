@@ -13,6 +13,7 @@ public class WatchScenetransition : MonoBehaviour
     private const int futureSceneIndex = 2;
     public RawImage fadeOutUIImage;
     private float fadeSpeed = 2f;
+    private bool canTravel = false;
     
     //Gameobjects to detect collisions between the righthand and watch for scene transitions
     public GameObject rightHand; 
@@ -26,8 +27,10 @@ public class WatchScenetransition : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        canTravel=false;
         Debug.Log("Scene loaded");
         StartCoroutine(Fade(FadeDirection.Out));
+        StartCoroutine(TravelDelay());
     }
 
     void OnEnable()
@@ -76,7 +79,7 @@ public class WatchScenetransition : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         // Check if the colliding object is the right hand
-        if (other.gameObject == rightHand.GetComponent<Collider>().gameObject)
+        if (other.gameObject == rightHand.GetComponent<Collider>().gameObject && canTravel==true)
         {
             Debug.Log("Hand and watch collision detected, transitioning scenes.");
             StartCoroutine(TimeTravel());
@@ -105,6 +108,13 @@ public class WatchScenetransition : MonoBehaviour
     {
         SceneManager.LoadScene(sceneBuildIndex: Scene);
     }
+    private IEnumerator TravelDelay()
+    {
+        // Wait for 5 seconds
+        yield return new WaitForSeconds(5f);
 
+        
+        canTravel = true;
+    }
 
 }
