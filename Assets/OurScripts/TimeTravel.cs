@@ -27,7 +27,7 @@ public class TimeTravel : MonoBehaviour
 
     private void Awake()
     {
-        StartCoroutine(TravelDelay());
+        canTravel=true;
         
         // Get the material attached to the plane
         if (fadePlane != null)
