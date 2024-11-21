@@ -381,6 +381,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1544071864124744070}
   - component: {fileID: 7648448491860975912}
+  - component: {fileID: 2360501587761048806}
   m_Layer: 0
   m_Name: SoilWith3SproutsAndQuests
   m_TagString: Untagged
@@ -397,8 +398,8 @@ Transform:
   m_GameObject: {fileID: 7421531546629931902}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.249075, y: 2.2373028, z: 3.271005}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 1.5819576, y: 2.2373028, z: 3.835974}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4221923157051165029}
@@ -423,3 +424,24 @@ MonoBehaviour:
   sproutBee: {fileID: 3261975135630844182}
   sproutBF: {fileID: 7183421223660849716}
   sproutHedgehog: {fileID: 1904227564396414629}
+--- !u!135 &2360501587761048806
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7421531546629931902}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
