@@ -58,8 +58,10 @@ public class TimeTravel : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        canTravel=false;
         Debug.Log("Scene loaded");
         StartCoroutine(Fade(FadeDirection.Out));
+        StartCoroutine(TravelDelay());
     }
 
     // Coroutine for fading the scene in and out
