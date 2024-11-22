@@ -1560,7 +1560,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shovelTip: {fileID: 1396846593}
-  SoilObject: {fileID: 7610556939836449568, guid: 50cefa7424b3b0242a97d968add80b64, type: 3}
+  SoilObject: {fileID: 7421531546629931902, guid: de071614e316c154081acc108112960b, type: 3}
   Ground: {fileID: 1367135060}
 --- !u!114 &543417780 stripped
 MonoBehaviour:
@@ -2986,7 +2986,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10, y: 2.1, z: 10.13}
+  m_Size: {x: 10, y: 2.220446e-16, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1367414252
 PrefabInstance:
