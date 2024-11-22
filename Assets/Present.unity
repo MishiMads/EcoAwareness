@@ -503,7 +503,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4674170462074778413, guid: 261fa4a31ab3d3643b496675826d94af, type: 3}
       propertyPath: MaxDistance
-      value: 8
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 5208187236946730770, guid: 261fa4a31ab3d3643b496675826d94af, type: 3}
       propertyPath: speech
