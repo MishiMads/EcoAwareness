@@ -1561,7 +1561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shovelTip: {fileID: 1396846593}
   SoilObject: {fileID: 7610556939836449568, guid: 50cefa7424b3b0242a97d968add80b64, type: 3}
-  Ground: {fileID: 216410582}
+  Ground: {fileID: 1367135060}
 --- !u!114 &543417780 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5208187236946730770, guid: 261fa4a31ab3d3643b496675826d94af, type: 3}
