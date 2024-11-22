@@ -254,6 +254,8 @@ MonoBehaviour:
   fadePlane: {fileID: 688717646}
   rightHand: {fileID: 19162366}
   watch: {fileID: 19162367}
+  playerStartPosition: {fileID: 1424736244}
+  PlayerPositionRecorder: {fileID: 40963181}
 --- !u!4 &19162369 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1326501014890817517, guid: 926549dc4f6f14f43b70a3961d52f683, type: 3}
@@ -1419,6 +1421,7 @@ MonoBehaviour:
   BeeFuture: {fileID: 605829864}
   BFFuture: {fileID: 605829864}
   HedgeHogFuture: {fileID: 605829864}
+  Portal: {fileID: 0}
 --- !u!4 &388168484
 Transform:
   m_ObjectHideFlags: 0
@@ -3419,6 +3422,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 185644a8a2d1d7d449b2b944f5c142b7, type: 3}
   m_PrefabInstance: {fileID: 1417565685}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1424736244 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6980746385470618842, guid: 926549dc4f6f14f43b70a3961d52f683, type: 3}
+  m_PrefabInstance: {fileID: 19162365}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1466974157
 GameObject:
