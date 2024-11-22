@@ -178,9 +178,21 @@ PrefabInstance:
       propertyPath: Ground
       value: 
       objectReference: {fileID: 216410582}
+    - target: {fileID: 5793591325662259991, guid: 926549dc4f6f14f43b70a3961d52f683, type: 3}
+      propertyPath: m_Constraints
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6518971100721691765, guid: 926549dc4f6f14f43b70a3961d52f683, type: 3}
+      propertyPath: m_Constraints
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 6980746385470618842, guid: 926549dc4f6f14f43b70a3961d52f683, type: 3}
       propertyPath: m_Name
       value: OriginDERVIRKER
+      objectReference: {fileID: 0}
+    - target: {fileID: 8131825001591448552, guid: 926549dc4f6f14f43b70a3961d52f683, type: 3}
+      propertyPath: m_Constraints
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 9200528817783625013, guid: 926549dc4f6f14f43b70a3961d52f683, type: 3}
       propertyPath: m_Enabled
