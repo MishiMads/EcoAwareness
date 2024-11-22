@@ -624,16 +624,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4674170462074778413, guid: 261fa4a31ab3d3643b496675826d94af, type: 3}
       propertyPath: m_Volume
-      value: 0.989
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4674170462074778413, guid: 261fa4a31ab3d3643b496675826d94af, type: 3}
       propertyPath: MaxDistance
-      value: 32
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4674170462074778413, guid: 261fa4a31ab3d3643b496675826d94af, type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 29005dd2faba74555ab0acf919ef5838, type: 3}
+    - target: {fileID: 4674170462074778413, guid: 261fa4a31ab3d3643b496675826d94af, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4674170462074778413, guid: 261fa4a31ab3d3643b496675826d94af, type: 3}
       propertyPath: m_PlayOnAwake
       value: 1
@@ -994,12 +998,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1618986243066448570, guid: fca8ff48a3265bb4ead9e9e443d98f7e, type: 3}
       propertyPath: MaxDistance
-      value: 24
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1618986243066448570, guid: fca8ff48a3265bb4ead9e9e443d98f7e, type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: d80943b7b2e03452a8d940c2347ab9f6, type: 3}
+    - target: {fileID: 1618986243066448570, guid: fca8ff48a3265bb4ead9e9e443d98f7e, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1618986243066448570, guid: fca8ff48a3265bb4ead9e9e443d98f7e, type: 3}
       propertyPath: m_PlayOnAwake
       value: 1
