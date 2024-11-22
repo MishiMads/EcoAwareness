@@ -14,6 +14,8 @@ public class FuturePlants : MonoBehaviour
   public GameObject BeeFuture;
   public GameObject BFFuture;
   public GameObject HedgeHogFuture;
+
+  public GameObject Portal;
   private void OnEnable()
   {
     // Subscribe to the SceneLoaded event
@@ -47,6 +49,12 @@ public class FuturePlants : MonoBehaviour
       Instantiate(HedgeHogPlantPrefab , QuestManager.Instance.HedgeHogPlant, Quaternion.identity);
       HedgeHogFuture.gameObject.SetActive(true);
       
+    }
+
+    if (Portal != null && QuestManager.Instance.HedgeHogQuestComplete && QuestManager.Instance.BFQuestComplete &&
+        QuestManager.Instance.beeQuestComplete)
+    {
+      Portal.gameObject.SetActive(true);
     }
   }
 }

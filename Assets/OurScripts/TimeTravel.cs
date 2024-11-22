@@ -17,8 +17,11 @@ public class TimeTravel : MonoBehaviour
     
     // GameObjects to detect collisions
     public GameObject rightHand; 
-    public GameObject watch;          
+    public GameObject watch;
 
+    public GameObject playerStartPosition;
+    public GameObject PlayerPositionRecorder;
+    
     public enum FadeDirection
     {
         In, // Alpha = 1
@@ -62,6 +65,11 @@ public class TimeTravel : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         canTravel=false;
+        if (playerStartPosition!=null)
+        {
+            Vector3 playerLocation = QuestManager.Instance.PlayerLocation;
+            playerStartPosition.transform.position = new Vector3(playerLocation.x, playerStartPosition.transform.position.y,playerLocation.z);
+        }
         Debug.Log("Scene loaded");
         StartCoroutine(Fade(FadeDirection.Out));
         StartCoroutine(TravelDelay());
@@ -112,6 +120,7 @@ public class TimeTravel : MonoBehaviour
         if (other.gameObject == rightHand.GetComponent<Collider>().gameObject && canTravel==true)
         {
             Debug.Log("Hand and watch collision detected, transitioning scenes.");
+            QuestManager.Instance.PlayerLocation = PlayerPositionRecorder.transform.position;
             StartCoroutine(TimeTravelling());
         }
     }

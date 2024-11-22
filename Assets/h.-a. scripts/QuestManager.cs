@@ -23,7 +23,8 @@ public class QuestManager : MonoBehaviour
    public Vector3 BeePlant;
    public Vector3 BFPlant;
    public Vector3 HedgeHogPlant;
-   
+
+   public Vector3 PlayerLocation;
    private void Awake(){
       if (Instance != null && Instance!=this)
       {
