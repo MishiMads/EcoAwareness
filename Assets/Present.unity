@@ -505,6 +505,14 @@ PrefabInstance:
       propertyPath: MaxDistance
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 4674170462074778413, guid: 261fa4a31ab3d3643b496675826d94af, type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674170462074778413, guid: 261fa4a31ab3d3643b496675826d94af, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5208187236946730770, guid: 261fa4a31ab3d3643b496675826d94af, type: 3}
       propertyPath: speech
       value: 
@@ -569,6 +577,14 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 7924216537347993485, guid: 261fa4a31ab3d3643b496675826d94af, type: 3}
+      propertyPath: sound1
+      value: 
+      objectReference: {fileID: 8300000, guid: 54f0af0bc87944c1daf8d02ddb99a2f1, type: 3}
+    - target: {fileID: 7924216537347993485, guid: 261fa4a31ab3d3643b496675826d94af, type: 3}
+      propertyPath: sound2
+      value: 
+      objectReference: {fileID: 8300000, guid: 54f0af0bc87944c1daf8d02ddb99a2f1, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
