@@ -92,11 +92,9 @@ public class Tutorial : MonoBehaviour
             case 16:
                 SetFrame(9, 9, false, true, false); break;
             case 17:
-                SetFrame(10, 9, false, true, false); break;
+                SetFrame(10, 10, false, true, false); break;
             case 18:
                 SetFrame(11, 10, false, true, false); break;
-            case 19:
-                SetFrame(11, 11, false, true, false); break;
             default:
                 EndTutorial();  break;
         }

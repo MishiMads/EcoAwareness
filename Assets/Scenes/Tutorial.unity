@@ -1157,19 +1157,18 @@ MonoBehaviour:
   - "S\xE5 er du klar! Held og lykke!"
   images:
   - {fileID: 21300000, guid: 6a96a3b64508cfa4cb487f19293d73eb, type: 3}
-  - {fileID: 21300000, guid: 771a343232ce8fa49882ff51266ba88c, type: 3}
-  - {fileID: 21300000, guid: 538ec09ebb117fc47b8824246a19ca21, type: 3}
-  - {fileID: 21300000, guid: b66e5624547aa124191501cec6b234e5, type: 3}
-  - {fileID: 21300000, guid: 891366c89f9f9cf41a6dc268f84fc4cb, type: 3}
-  - {fileID: 21300000, guid: d19dd0990f8ac714caafb3451b7de8b4, type: 3}
+  - {fileID: 21300000, guid: e561991d661cab04e9975722079d1bd8, type: 3}
+  - {fileID: 21300000, guid: 2edcd85d0af42444abb7b59fa77991d7, type: 3}
+  - {fileID: 21300000, guid: f2f0bad494b94394cb15893ccafa2c76, type: 3}
+  - {fileID: 21300000, guid: fee1542bc8e1b2c4c8ead754a0257653, type: 3}
+  - {fileID: 21300000, guid: 1f608511149bf9442986d78f2feacf4a, type: 3}
   - {fileID: 21300000, guid: 6a96a3b64508cfa4cb487f19293d73eb, type: 3}
-  - {fileID: 21300000, guid: 22f671925a6e47f4f89a018e1077fcee, type: 3}
-  - {fileID: 21300000, guid: 64c72790897d3e44dbf13bde2671d8fb, type: 3}
-  - {fileID: 21300000, guid: 0f23ba56a2369f240850d68f2ef5366e, type: 3}
-  - {fileID: 21300000, guid: af153a9563a22e84595e14ac9b25ea12, type: 3}
+  - {fileID: 21300000, guid: a1c2a56d974ef7f4fbc14aea33b5b18f, type: 3}
+  - {fileID: 21300000, guid: 6499c5e43faade645a55e63182276a9c, type: 3}
+  - {fileID: 21300000, guid: 0b48815116b1d274a849a5b97e56c2e6, type: 3}
   - {fileID: 21300000, guid: 6a96a3b64508cfa4cb487f19293d73eb, type: 3}
   overlays:
-  - {fileID: 21300000, guid: 09b80653dba897946a9467c8cb09e018, type: 3}
+  - {fileID: 21300000, guid: ae05211dffa624f438c1d71315ab6b04, type: 3}
   - {fileID: 21300000, guid: 2b471ed8ed9803f47b057f66c5a4c1ce, type: 3}
   nextLineActionA:
     m_Name: Next Line Action A
