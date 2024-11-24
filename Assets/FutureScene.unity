@@ -1664,13 +1664,42 @@ PrefabInstance:
     - {fileID: 4204938231465108630, guid: e4fc5040eb4224a408fe35d2ae50724e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5259786123117772281, guid: e4fc5040eb4224a408fe35d2ae50724e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 141554595}
   m_SourcePrefab: {fileID: 100100000, guid: e4fc5040eb4224a408fe35d2ae50724e, type: 3}
 --- !u!4 &141554593 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4878897237423744835, guid: e4fc5040eb4224a408fe35d2ae50724e, type: 3}
   m_PrefabInstance: {fileID: 141554592}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &141554594 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5259786123117772281, guid: e4fc5040eb4224a408fe35d2ae50724e, type: 3}
+  m_PrefabInstance: {fileID: 141554592}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &141554595
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141554594}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.58137107
+  m_Center: {x: 0.00000092387194, y: 0.35968643, z: -0.00000011920928}
 --- !u!1001 &142073329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4585,7 +4614,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.4
+  m_Radius: 0.5
   m_Center: {x: 0.016469227, y: 0, z: 0.00062288303}
 --- !u!1 &495594330
 GameObject:
@@ -13993,7 +14022,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 855e6cb1c5b23d645896b40ac8c8b9b8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.51
+      value: -8.577
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 855e6cb1c5b23d645896b40ac8c8b9b8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14042,13 +14071,44 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 855e6cb1c5b23d645896b40ac8c8b9b8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1391461060}
   m_SourcePrefab: {fileID: 100100000, guid: 855e6cb1c5b23d645896b40ac8c8b9b8, type: 3}
 --- !u!4 &1391461058 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 855e6cb1c5b23d645896b40ac8c8b9b8, type: 3}
   m_PrefabInstance: {fileID: 1391461057}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1391461059 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 855e6cb1c5b23d645896b40ac8c8b9b8, type: 3}
+  m_PrefabInstance: {fileID: 1391461057}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &1391461060
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391461059}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.23771872
+  m_Height: 0.76593107
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.3745553, z: 0}
 --- !u!1001 &1391644945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15037,7 +15097,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1439649470
 Transform:
   m_ObjectHideFlags: 0
@@ -15844,7 +15904,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 0.7
   m_Center: {x: 0.00012895465, y: 0, z: 0.009340793}
 --- !u!1001 &1539435405
 PrefabInstance:
