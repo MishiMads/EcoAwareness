@@ -8,6 +8,7 @@ using UnityEngine.InputSystem;
 using System.Runtime.CompilerServices;
 using UnityEditor.Overlays;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 public class Tutorial : MonoBehaviour
 {
@@ -194,6 +195,6 @@ public class Tutorial : MonoBehaviour
     // Ends tutorial if button is pressed on last frame
     private void EndTutorial()
     {
-        gameObject.SetActive(false);
+        SceneManager.LoadScene(sceneBuildIndex: 1);
     }
 }
