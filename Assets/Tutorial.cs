@@ -97,6 +97,7 @@ public class Tutorial : MonoBehaviour
             case 18:
                 SetFrame(11, 10, false, true, false); break;
             default:
+                Debug.Log("Tutorial ending called");
                 EndTutorial();  break;
         }
     }
@@ -195,6 +196,7 @@ public class Tutorial : MonoBehaviour
     // Ends tutorial if button is pressed on last frame
     private void EndTutorial()
     {
+        Debug.Log("Tutorial finished");
         SceneManager.LoadScene(sceneBuildIndex: 1);
     }
 }
