@@ -4891,7 +4891,7 @@ GameObject:
   - component: {fileID: 544148176}
   - component: {fileID: 544148175}
   m_Layer: 0
-  m_Name: Plant Maneger
+  m_Name: Plant Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4915,7 +4915,7 @@ MonoBehaviour:
   BeeFuture: {fileID: 2075946478}
   BFFuture: {fileID: 2004868834}
   HedgeHogFuture: {fileID: 1439649469}
-  Portal: {fileID: 0}
+  Portal: {fileID: 987615124}
 --- !u!4 &544148176
 Transform:
   m_ObjectHideFlags: 0
