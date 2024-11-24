@@ -9935,10 +9935,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 5.4
-  m_Height: 10.800003
+  m_Radius: 4
+  m_Height: 17.180408
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -1.1507898e-14, z: 3.1902027}
 --- !u!114 &987615128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10420,6 +10420,7 @@ GameObject:
   - component: {fileID: 1023895873}
   - component: {fileID: 1023895877}
   - component: {fileID: 1023895876}
+  - component: {fileID: 1023895878}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Player
@@ -10470,7 +10471,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1023895871}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -10628,6 +10629,33 @@ MonoBehaviour:
   - {fileID: 8300000, guid: aded160726d94014a9c2a9e42fdbf280, type: 3}
   - {fileID: 8300000, guid: 515a0853871a9b445a56b40b52199056, type: 3}
   movementThreshold: 0.01
+--- !u!54 &1023895878
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023895871}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &1031449535
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -7,14 +7,17 @@ using UnityEngine.SceneManagement;
 public class PortalScript : MonoBehaviour
 {
  private int EndSceneIndex = 3;
-
+    
 
  private void OnTriggerEnter(Collider other)
  {
-  if (other.gameObject.CompareTag("Player"))
-  {
-   Debug.Log("Portal collision");
-   SceneManager.LoadScene(sceneBuildIndex: EndSceneIndex);
-  }
+        Debug.Log("The Portal has detected a collision");
+
+        if (other.gameObject.CompareTag("Player"))
+        {
+
+            Debug.Log("Portal collision with player detected.");
+            SceneManager.LoadScene(sceneBuildIndex: EndSceneIndex);
+        }
  }
 }
