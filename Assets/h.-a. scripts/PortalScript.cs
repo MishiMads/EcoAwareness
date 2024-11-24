@@ -13,6 +13,7 @@ public class PortalScript : MonoBehaviour
  {
   if (other.gameObject.CompareTag("Player"))
   {
+   Debug.Log("Portal collision");
    SceneManager.LoadScene(sceneBuildIndex: EndSceneIndex);
   }
  }
