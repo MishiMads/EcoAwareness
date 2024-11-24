@@ -25,6 +25,17 @@ public class SeedManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+         
+        
+    }
+
+
+    private IEnumerator removeSeed()
+    {
+        
+        yield return new WaitForSeconds(1);
+
+        
         if (QuestManager.Instance.beeQuestComplete)
         {
             BeeSeed.gameObject.SetActive(false);
@@ -38,10 +49,8 @@ public class SeedManager : MonoBehaviour
         if (QuestManager.Instance.HedgeHogQuestComplete)
         {
             HedgeHogSeed.gameObject.SetActive(false);
-        }    
-        
+        }
+
+        Debug.Log("seeds removed");
     }
-
-
-
 }
