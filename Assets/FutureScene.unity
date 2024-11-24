@@ -4261,6 +4261,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4391687224821864245, guid: 926549dc4f6f14f43b70a3961d52f683, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 836049787211714383, guid: 926549dc4f6f14f43b70a3961d52f683, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1278091168}
     - targetCorrespondingSourceObject: {fileID: 4698323805815292130, guid: 926549dc4f6f14f43b70a3961d52f683, type: 3}
       insertIndex: -1
       addedObject: {fileID: 438272975}
@@ -12882,6 +12885,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 853b55ee5d8ab454997c9471329c5040, type: 3}
   m_PrefabInstance: {fileID: 1277248694}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1278091167 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 836049787211714383, guid: 926549dc4f6f14f43b70a3961d52f683, type: 3}
+  m_PrefabInstance: {fileID: 438272960}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1278091168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278091167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a748257f5f3aa6e43a9f11190f7f4eec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BeeSeed: {fileID: 438272968}
+  ButteflySeed: {fileID: 438272971}
+  HedgeHogSeed: {fileID: 438272965}
 --- !u!1001 &1292315583
 PrefabInstance:
   m_ObjectHideFlags: 0
