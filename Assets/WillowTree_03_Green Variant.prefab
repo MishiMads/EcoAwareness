@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1179780331559699268, guid: 70a546c36357c4149bc6f75207953673, type: 3}
+      propertyPath: m_Center.y
+      value: 1.1
+      objectReference: {fileID: 0}
     - target: {fileID: 1703526568568656569, guid: 70a546c36357c4149bc6f75207953673, type: 3}
       propertyPath: m_Name
       value: WillowTree_03_Green Variant
@@ -71,5 +75,40 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1703526568568656569, guid: 70a546c36357c4149bc6f75207953673, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3061118639082467356}
   m_SourcePrefab: {fileID: 100100000, guid: 70a546c36357c4149bc6f75207953673, type: 3}
+--- !u!1 &5561025253252818054 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1703526568568656569, guid: 70a546c36357c4149bc6f75207953673, type: 3}
+  m_PrefabInstance: {fileID: 6523639305244898879}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &3061118639082467356
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5561025253252818054}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 122
+  m_CollisionDetection: 0
