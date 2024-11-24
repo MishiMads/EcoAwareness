@@ -197,6 +197,9 @@ public class Tutorial : MonoBehaviour
     private void EndTutorial()
     {
         Debug.Log("Tutorial finished");
+        nextLineActionA.Disable();
+        nextLineActionX.Disable();
+        Debug.Log("Tutorial bindings disabled");
         SceneManager.LoadScene(sceneBuildIndex: 1);
     }
 }
