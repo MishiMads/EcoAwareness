@@ -9,8 +9,8 @@ public class FuturePlants : MonoBehaviour
   public GameObject BeePlantPrefab;
   public GameObject BFPlantPrefab;
   public GameObject HedgeHogPlantPrefab;
-  
-  
+
+  public GameObject backgroundNoise;
   public GameObject BeeFuture;
   public GameObject BFFuture;
   public GameObject HedgeHogFuture;
@@ -51,6 +51,12 @@ public class FuturePlants : MonoBehaviour
       
     }
 
+    if (QuestManager.Instance.beeQuestComplete || QuestManager.Instance.BFQuestComplete ||
+        QuestManager.Instance.HedgeHogQuestComplete)
+    {
+      backgroundNoise.gameObject.SetActive(true);
+    }
+    
     if (Portal != null && QuestManager.Instance.HedgeHogQuestComplete && QuestManager.Instance.BFQuestComplete &&
         QuestManager.Instance.beeQuestComplete)
     {
