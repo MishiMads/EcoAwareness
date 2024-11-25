@@ -36,6 +36,11 @@ public class QuestManager : MonoBehaviour
       {
           Instance=this;
           DontDestroyOnLoad(gameObject); 
+          interactionLookup = new Dictionary<string, bool>();
+          foreach (var interaction in BoolList)
+          {
+              interactionLookup[interaction.Animal] = interaction.HasInteracted;
+          }
       }
   
    }
