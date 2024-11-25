@@ -18,17 +18,7 @@ public class ParticleManager : MonoBehaviour
         {
             ParticleEffects.gameObject.SetActive(false);
             //finds this animal in the list of animals
-            foreach (var InteracttionBool in QuestManager.Instance.BoolList)
-            {
-                if (ThisAnimal == InteracttionBool.Animal)
-                {
-                    //marks them as having been interacted with
-                    InteracttionBool.HasInteracted = true;
-                    // This ends the loop 
-                    break;
-                }
-            
-            }
+            QuestManager.Instance.SetInteractedWith(ThisAnimal, true);
         }
     }
     private void OnEnable()
@@ -47,22 +37,18 @@ public class ParticleManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        
+        Debug.Log(ThisAnimal+" Is checking if it has iteracted");
         //looks through the list of animals in questManager
-        foreach (var InteracttionBool in QuestManager.Instance.BoolList)
+        if (QuestManager.Instance.HasInteractedWith(ThisAnimal))
         {
-            if (ThisAnimal == InteracttionBool.Animal)
-            {
-                //checks if the animal has already been talked too
-                if (InteracttionBool.HasInteracted == true)
-                {
-                    Debug.Log(ThisAnimal+" Has interacted");
-                    //disables the particle system
-                    ParticleEffects.gameObject.SetActive(false);
-                }
-                // This ends the loop 
-                break;
-            }
-            
+            Debug.Log(ThisAnimal+" Has interacted");
+            //disables the particle system
+            ParticleEffects.gameObject.SetActive(false);
         }
+        
     }
+            
+        
+    
 }

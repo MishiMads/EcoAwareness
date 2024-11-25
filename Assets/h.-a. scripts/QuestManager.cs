@@ -16,6 +16,8 @@ public class QuestManager : MonoBehaviour
 {
    public static QuestManager Instance;
    public List<InteracttionBool> BoolList;
+   private Dictionary<string, bool> interactionLookup;
+   
    public bool beeQuestComplete = false;
    public bool BFQuestComplete = false;
    public bool HedgeHogQuestComplete = false;
@@ -36,5 +38,28 @@ public class QuestManager : MonoBehaviour
           DontDestroyOnLoad(gameObject); 
       }
   
+   }
+   
+   public bool HasInteractedWith(string animal)
+   {
+       return interactionLookup.ContainsKey(animal) && interactionLookup[animal];
+   }
+   
+   public void SetInteractedWith(string animal, bool hasInteracted)
+   {
+       if (interactionLookup.ContainsKey(animal))
+       {
+           interactionLookup[animal] = hasInteracted;
+
+           // Also update the InteractionList for consistency if needed
+           foreach (var interaction in BoolList)
+           {
+               if (interaction.Animal == animal)
+               {
+                   interaction.HasInteracted = hasInteracted;
+                   break;
+               }
+           }
+       }
    }
 }
