@@ -706,7 +706,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7418449998226211405, guid: 261fa4a31ab3d3643b496675826d94af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.066254
+      value: 12.3
       objectReference: {fileID: 0}
     - target: {fileID: 7418449998226211405, guid: 261fa4a31ab3d3643b496675826d94af, type: 3}
       propertyPath: m_LocalPosition.y
@@ -714,7 +714,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7418449998226211405, guid: 261fa4a31ab3d3643b496675826d94af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.543951
+      value: 16.4
       objectReference: {fileID: 0}
     - target: {fileID: 7418449998226211405, guid: 261fa4a31ab3d3643b496675826d94af, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1845,15 +1845,15 @@ PrefabInstance:
     - target: {fileID: 7985499796531775213, guid: d32f63ddad6f44b45b8b91d14221012a, type: 3}
       propertyPath: ImageList.Array.data[0].image
       value: 
-      objectReference: {fileID: 21300000, guid: 1639b584a206b4baf96180406aed3d54, type: 3}
+      objectReference: {fileID: 21300000, guid: faca0e9f64ec34ff89ec41d9df1ea50c, type: 3}
     - target: {fileID: 7985499796531775213, guid: d32f63ddad6f44b45b8b91d14221012a, type: 3}
       propertyPath: ImageList.Array.data[1].image
       value: 
-      objectReference: {fileID: 21300000, guid: 07b2b691b943741bc8d5ede099e86f35, type: 3}
+      objectReference: {fileID: 21300000, guid: c9512aca1abac443da95453b8e7ac135, type: 3}
     - target: {fileID: 7985499796531775213, guid: d32f63ddad6f44b45b8b91d14221012a, type: 3}
       propertyPath: ImageList.Array.data[2].image
       value: 
-      objectReference: {fileID: 21300000, guid: 21a1fe1076d5a495aa73361a93dfeabe, type: 3}
+      objectReference: {fileID: 21300000, guid: 150b918cb8a3b46f798c20cc0a4a82d5, type: 3}
     - target: {fileID: 9072316811843986280, guid: d32f63ddad6f44b45b8b91d14221012a, type: 3}
       propertyPath: m_Name
       value: Dialogue Canvas
