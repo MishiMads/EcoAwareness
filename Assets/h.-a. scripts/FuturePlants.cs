@@ -14,7 +14,9 @@ public class FuturePlants : MonoBehaviour
   public GameObject BeeFuture;
   public GameObject BFFuture;
   public GameObject HedgeHogFuture;
-
+  public ParticleManager BeeParticle;
+  public ParticleManager BfParticle;
+  public ParticleManager HedgeHogParticle;
   public GameObject Portal;
   private void OnEnable()
   {
@@ -61,6 +63,21 @@ public class FuturePlants : MonoBehaviour
         QuestManager.Instance.beeQuestComplete)
     {
       Portal.gameObject.SetActive(true);
+    }
+    
+    if(BeeParticle!=null)
+    {
+      BeeParticle.CheckParticles();
+    }
+
+    if (BfParticle != null)
+    {
+      BfParticle.CheckParticles();
+    }
+
+    if (HedgeHogParticle)
+    {
+      HedgeHogParticle.CheckParticles();
     }
   }
 }

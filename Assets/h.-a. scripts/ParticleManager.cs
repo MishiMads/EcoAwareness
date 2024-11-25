@@ -21,21 +21,9 @@ public class ParticleManager : MonoBehaviour
             QuestManager.Instance.SetInteractedWith(ThisAnimal, true);
         }
     }
-    private void OnEnable()
-    {
-        // Subscribe to the SceneLoaded event
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
+ 
 
-
-
-    private void OnDisable()
-    {
-        // Unsubscribe to prevent memory leaks
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
-
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    public void CheckParticles()
     {
         
         Debug.Log(ThisAnimal+" Is checking if it has iteracted");
