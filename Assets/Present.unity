@@ -1120,6 +1120,10 @@ PrefabInstance:
       propertyPath: InitialModule.startLifetime.scalar
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3579309674922869473, guid: fca8ff48a3265bb4ead9e9e443d98f7e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 4894711646233199115, guid: fca8ff48a3265bb4ead9e9e443d98f7e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1841,15 +1845,15 @@ PrefabInstance:
     - target: {fileID: 7985499796531775213, guid: d32f63ddad6f44b45b8b91d14221012a, type: 3}
       propertyPath: ImageList.Array.data[0].image
       value: 
-      objectReference: {fileID: 21300000, guid: e460f4569b5de48428eabe470c536219, type: 3}
+      objectReference: {fileID: 21300000, guid: 1639b584a206b4baf96180406aed3d54, type: 3}
     - target: {fileID: 7985499796531775213, guid: d32f63ddad6f44b45b8b91d14221012a, type: 3}
       propertyPath: ImageList.Array.data[1].image
       value: 
-      objectReference: {fileID: 21300000, guid: 1b1c7d0f3247b4851b13b0ca543ba519, type: 3}
+      objectReference: {fileID: 21300000, guid: 07b2b691b943741bc8d5ede099e86f35, type: 3}
     - target: {fileID: 7985499796531775213, guid: d32f63ddad6f44b45b8b91d14221012a, type: 3}
       propertyPath: ImageList.Array.data[2].image
       value: 
-      objectReference: {fileID: 21300000, guid: 3c2095f900e5047998ada6d9e797995a, type: 3}
+      objectReference: {fileID: 21300000, guid: 21a1fe1076d5a495aa73361a93dfeabe, type: 3}
     - target: {fileID: 9072316811843986280, guid: d32f63ddad6f44b45b8b91d14221012a, type: 3}
       propertyPath: m_Name
       value: Dialogue Canvas
