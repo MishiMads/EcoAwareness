@@ -55,6 +55,7 @@ public class ParticleManager : MonoBehaviour
                 //checks if the animal has already been talked too
                 if (InteracttionBool.HasInteracted == true)
                 {
+                    Debug.Log(ThisAnimal+" Has interacted");
                     //disables the particle system
                     ParticleEffects.gameObject.SetActive(false);
                 }
