@@ -1830,13 +1830,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 135045667}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.67559016, y: 0, z: 0, w: 0.7372774}
+  m_LocalRotation: {x: 0.6819983, y: 0, z: 0, w: 0.7313538}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 85, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 86, y: 0, z: 0}
 --- !u!1001 &141554592
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5540,6 +5540,9 @@ MonoBehaviour:
   BeeFuture: {fileID: 2075946478}
   BFFuture: {fileID: 2004868834}
   HedgeHogFuture: {fileID: 1439649469}
+  BeeParticle: {fileID: 0}
+  BfParticle: {fileID: 0}
+  HedgeHogParticle: {fileID: 0}
   Portal: {fileID: 987615124}
 --- !u!4 &544148176
 Transform:
