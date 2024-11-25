@@ -14,9 +14,9 @@ public class FuturePlants : MonoBehaviour
   public GameObject BeeFuture;
   public GameObject BFFuture;
   public GameObject HedgeHogFuture;
-  public ParticleManager BeeParticle;
-  public ParticleManager BfParticle;
-  public ParticleManager HedgeHogParticle;
+  public GameObject BeeParticle;
+  public GameObject BfParticle;
+  public GameObject HedgeHogParticle;
   public GameObject Portal;
   private void OnEnable()
   {
@@ -38,19 +38,30 @@ public class FuturePlants : MonoBehaviour
     {
       Instantiate(BeePlantPrefab , QuestManager.Instance.BeePlant, Quaternion.identity);
       BeeFuture.gameObject.SetActive(true);
+      if(BeeParticle!=null)
+      {
+        BeeParticle.gameObject.SetActive(false);
+      }
     }
     
     if (QuestManager.Instance.BFQuestComplete)
     {
       Instantiate(BFPlantPrefab , QuestManager.Instance.BFPlant, Quaternion.identity);
       BFFuture.gameObject.SetActive(true);
+      if(BeeParticle!=null)
+      {
+        BfParticle.gameObject.SetActive(false);
+      }
     }
     
     if (QuestManager.Instance.HedgeHogQuestComplete)
     {
       Instantiate(HedgeHogPlantPrefab , QuestManager.Instance.HedgeHogPlant, Quaternion.identity);
       HedgeHogFuture.gameObject.SetActive(true);
-      
+      if (HedgeHogParticle!=null)
+      {
+        HedgeHogParticle.gameObject.SetActive(false);
+      }
     }
 
     if (QuestManager.Instance.beeQuestComplete || QuestManager.Instance.BFQuestComplete ||
@@ -64,20 +75,19 @@ public class FuturePlants : MonoBehaviour
     {
       Portal.gameObject.SetActive(true);
     }
+
+    if (QuestManager.Instance.HasInteractedWith("hedgehog") && HedgeHogParticle != null)
+    {
+      Destroy(HedgeHogParticle);
+    }
+    if (QuestManager.Instance.HasInteractedWith("bee") && BeeParticle != null)
+    {
+      Destroy(BeeParticle);
+    }
     
-    if(BeeParticle!=null)
+    if (QuestManager.Instance.HasInteractedWith("bf") && BfParticle != null)
     {
-      BeeParticle.CheckParticles();
-    }
-
-    if (BfParticle != null)
-    {
-      BfParticle.CheckParticles();
-    }
-
-    if (HedgeHogParticle)
-    {
-      HedgeHogParticle.CheckParticles();
+     Destroy(BfParticle);
     }
   }
 }
