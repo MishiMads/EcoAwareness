@@ -9,10 +9,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Tutorial.unity
     guid: f92bf1c1ab7709a43b0c53378e880271
   - enabled: 1
-    path: Assets/Present.unity
+    path: Assets/Scenes/Present.unity
     guid: 05e9246520e04a047a2f422f1853e0bf
   - enabled: 1
-    path: Assets/FutureScene.unity
+    path: Assets/Scenes/FutureScene.unity
     guid: 59dd81908eaaf41b88887645aedf52f3
   - enabled: 1
     path: Assets/Scenes/Ending.unity
