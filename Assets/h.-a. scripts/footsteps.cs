@@ -8,10 +8,11 @@ public class footsteps : MonoBehaviour
 {
  public AudioSource walking;
 
- public AudioClip[] walksound;
+ public AudioClip[] walksound;//collection of footstep sounds
  private int currentClipIndex = 0;
 
- public float movementThreshold = 0.01f;
+ public float movementThreshold = 0.01f; //how far the character needs to move before the script starts play sounds
+ //this to prevent the sounds from playing when the player just leans 
  private Vector3 lastPosition;
 
  private float timeSinceLastStep = 0f;
@@ -43,7 +44,7 @@ public class footsteps : MonoBehaviour
  {
   if (walksound.Length == 0) return;
 
-  // Select a random sound from the array of footstep sounds
+  // This select a random sound from the array of footstep sounds
   int clipIndex = Random.Range(0, walksound.Length);
   AudioClip selectedClip = walksound[clipIndex];
         

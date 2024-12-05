@@ -6,16 +6,17 @@ using UnityEngine;
 public class patrol : MonoBehaviour
 {
     
-    public float speed = 2f;
+    public float speed = 2f; //how fast the animal moves
     
-    //the start position is the position of the npc when the game starts
-    private Vector3 StartPosition;
-    private bool moveforward = true;
-    private bool move = true;
-    private Vector3 goalPosition;
+  
+    private Vector3 StartPosition;   //the start position is the position of the npc when the game starts
+    private bool moveforward = true; //when moveforward is true the animal moves toward the goalPosition, when false
+    
+    private bool move = true; //this bool determines weaether script should actualy move
+    private Vector3 goalPosition; //The position the animal will move toward at the start
     //this gameobject is what the npc will walk toward from its start position
-    public GameObject goal;
-    private GameObject LookingAt;
+    public GameObject goal; //this gameobject marks the goal position
+    private GameObject LookingAt; //This is the
     void Start()
     {
         //recording positions. Note you cannot curently change what positions the npc walk between while the game is running
@@ -54,7 +55,7 @@ public class patrol : MonoBehaviour
             }
 
         }
- //This part of the script allows the npc to look at the player regards of where inside the speech collider the player walks
+        //This part of the script allows the npc to look at the player regards of where inside the speech collider the player walks
  
         if (!move)
         {

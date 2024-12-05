@@ -17,13 +17,14 @@ public class ImageText
 public class Dialogue : MonoBehaviour
 {
 
-    public List<ImageText> ImageList;
-    public TextMeshProUGUI textComponent;
-    public string[] lines;
-    public float textSpeed;
-    public Image imageRender;
+    public List<ImageText> ImageList; //list of images associated with text
+    public TextMeshProUGUI textComponent; //the TEXTMeshProUGUI used for text
+    public string[] lines; //A list of lines 
+    public float textSpeed; //how fast the text should be written
+    public Image imageRender; //the image render used for images in the speech bubble
     
-    public int index;
+    public int index; // the line currently being read by the program. This is not currently relevant in the final version
+    //as all animals only have one line and its used to reference an image
 
     private InputAction nextLineAction; //i need this for the input system to work
 
@@ -31,6 +32,8 @@ public class Dialogue : MonoBehaviour
     //private bool isImage = false;
     private Sprite imageToLoad;
 
+    //the awake onenable and ondisable functions were all used for testing the setup and were not used in the final
+    //version, They simply allow us to use the input action system, to call functions on button presses.
     private void Awake()
     {
         //this lets me call the OnNextLinePressed() function by pressing b
@@ -85,7 +88,7 @@ public class Dialogue : MonoBehaviour
         NextLine();
     }
 
-  
+  //this  corutine types out a line.
 
     IEnumerator TypeLine()
     {
@@ -98,14 +101,15 @@ public class Dialogue : MonoBehaviour
         }
         
     }
-
+//this function sets up the image
     private void pressentImage(Sprite image)
     {
         
         textComponent.text = string.Empty;
         imageRender.sprite = image;
     }
-
+//this function wipes clean the speech bubble and then checks if the the next line is an image reference or just a line.
+//it then calls the appropriate function.
     void NextLine()
     {
         if (index < lines.Length)

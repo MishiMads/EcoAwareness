@@ -15,7 +15,7 @@ public class UIFloat : MonoBehaviour
     {
         
     }
-
+    //This function set the target the UI should float above, because it is public it 
     public void activate(Transform Target)
     {
         target = Target;
@@ -28,10 +28,11 @@ public class UIFloat : MonoBehaviour
     {
         if (target != null && mainCamera != null)
         {
-            // Make the UI element face the camera
+            // This rotates the UI to face the camera
             UItransform.rotation = Quaternion.LookRotation(UItransform.position - mainCamera.transform.position);
 
-            // Position the UI element above the target, with the specified offset
+            // Positions the UI element above the target, by making the UI's position equal to the targets modified
+            // by the off set
             UItransform.position = target.position + worldOffset;
         }
 

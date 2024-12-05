@@ -19,8 +19,8 @@ public class TimeTravel : MonoBehaviour
     public GameObject rightHand; 
     public GameObject watch;
 
-    public GameObject playerStartPosition;
-    public GameObject PlayerPositionRecorder;
+    public GameObject playerStartPosition; //this where the player will spawn in the next scene
+    public GameObject PlayerPositionRecorder; //this the an object that records the curent position of the player
     
     public enum FadeDirection
     {
@@ -51,7 +51,9 @@ public class TimeTravel : MonoBehaviour
         }
         
     }
-
+    
+    //onEnable allows the OnSceneLoaded function to actually work. OnDisable turns it of when the script stop running.
+    //It is turned off when the script stops in order to prevent it from becoming a resource drain
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -61,18 +63,20 @@ public class TimeTravel : MonoBehaviour
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
-
+//This function triggers when a scene is loaded
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        canTravel=false;
+        canTravel=false; //this makes it so that the player cant travel to another scene
         if (playerStartPosition!=null)
         {
+            //this retrieves the recorded position from the questmanager and moves the player to it once they have been
+            //moved to the new scene
             Vector3 playerLocation = QuestManager.Instance.PlayerLocation;
             playerStartPosition.transform.position = new Vector3(playerLocation.x, playerStartPosition.transform.position.y,playerLocation.z);
         }
         Debug.Log("Scene loaded");
-        StartCoroutine(Fade(FadeDirection.Out));
-        StartCoroutine(TravelDelay());
+        StartCoroutine(Fade(FadeDirection.Out)); //this corutine does  a fade in effect
+        StartCoroutine(TravelDelay()); //this corrutine lets the player travel between scenes once a few sceconds have passed
     }
 
     // Coroutine for fading the scene in and out

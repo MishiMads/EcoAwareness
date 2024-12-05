@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class BeeQuest : MonoBehaviour
 {
-
+    
+    //this function is called  whenever the object becomes active, meaning that it will run when the object is set actaive
+    //and when it is instatiated.
 void OnEnable()
     {
         QuestManager.Instance.beeQuestComplete=true;

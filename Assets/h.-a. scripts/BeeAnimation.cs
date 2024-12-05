@@ -12,9 +12,9 @@ public class BeeAnimation : MonoBehaviour
     public float switchInterval = 0.5f;
     //How fast you want it to go up and down
     public float speed = 1f;
-
+    //timer used to check how much time has passed
     private float timer = 0.0f;
-
+    //This bool is used to check weather the bee should move up or down
     private bool movingUp = true;
     // Start is called before the first frame update
     void Start()
