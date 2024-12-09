@@ -5395,6 +5395,9 @@ MonoBehaviour:
   BeePlantPrefab: {fileID: 5561025253252818054, guid: 70203a90f14ad443fb832e56e246d693, type: 3}
   BFPlantPrefab: {fileID: 1782208810907245216, guid: 4459236c97eeb451f9c0e4d97542f2df, type: 3}
   HedgeHogPlantPrefab: {fileID: 5259786123117772281, guid: e4fc5040eb4224a408fe35d2ae50724e, type: 3}
+  BeeSeed: {fileID: 438272968}
+  ButteflySeed: {fileID: 438272971}
+  HedgeHogSeed: {fileID: 438272965}
   backgroundNoise: {fileID: 1200283481}
   BeeFuture: {fileID: 2075946478}
   BFFuture: {fileID: 2004868834}
@@ -13571,7 +13574,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1278091167}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a748257f5f3aa6e43a9f11190f7f4eec, type: 3}
   m_Name: 

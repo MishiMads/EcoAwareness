@@ -10,6 +10,10 @@ public class FuturePlants : MonoBehaviour
   public GameObject BFPlantPrefab;
   public GameObject HedgeHogPlantPrefab;
 
+  public GameObject BeeSeed;
+  public GameObject ButteflySeed;
+  public GameObject HedgeHogSeed;
+  
   public GameObject backgroundNoise;
   public GameObject BeeFuture;
   public GameObject BFFuture;
@@ -73,7 +77,7 @@ public class FuturePlants : MonoBehaviour
     if (Portal != null && QuestManager.Instance.HedgeHogQuestComplete && QuestManager.Instance.BFQuestComplete &&
         QuestManager.Instance.beeQuestComplete)
     {
-      Portal.gameObject.SetActive(true);
+      StartCoroutine(portalWait());
     }
 
     if (QuestManager.Instance.HasInteractedWith("hedgehog") && HedgeHogParticle != null)
@@ -89,5 +93,40 @@ public class FuturePlants : MonoBehaviour
     {
      Destroy(BfParticle);
     }
+
+    StartCoroutine(removeSeed());
+
   }
+
+  private IEnumerator portalWait()
+  {
+    yield return new WaitForSeconds(10f);
+    Portal.gameObject.SetActive(true);
+
+  }
+  
+  private IEnumerator removeSeed()
+  {
+        
+    yield return new WaitForSeconds(1);
+
+        
+    if (QuestManager.Instance.beeQuestComplete)
+    {
+      BeeSeed.gameObject.SetActive(false);
+    }
+
+    if (QuestManager.Instance.BFQuestComplete)
+    {
+      ButteflySeed.gameObject.SetActive(false);
+    }
+
+    if (QuestManager.Instance.HedgeHogQuestComplete)
+    {
+      HedgeHogSeed.gameObject.SetActive(false);
+    }
+
+    Debug.Log("seeds removed");
+  }
+
 }

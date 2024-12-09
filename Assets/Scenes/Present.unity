@@ -804,6 +804,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fbc9b6bad04f434d9e1968784173c1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rigidbody: {fileID: 0}
+  grabInteractable: {fileID: 0}
 --- !u!1 &124618024
 GameObject:
   m_ObjectHideFlags: 0
@@ -1437,13 +1439,16 @@ MonoBehaviour:
   BeePlantPrefab: {fileID: 7421531546629931902, guid: 354e9410ec7784686a9557eae4fea18b, type: 3}
   BFPlantPrefab: {fileID: 7421531546629931902, guid: 354e9410ec7784686a9557eae4fea18b, type: 3}
   HedgeHogPlantPrefab: {fileID: 7421531546629931902, guid: 354e9410ec7784686a9557eae4fea18b, type: 3}
+  BeeSeed: {fileID: 1602769549}
+  ButteflySeed: {fileID: 1602769552}
+  HedgeHogSeed: {fileID: 1602769546}
   backgroundNoise: {fileID: 0}
   BeeFuture: {fileID: 605829864}
   BFFuture: {fileID: 605829864}
   HedgeHogFuture: {fileID: 605829864}
   BeeParticle: {fileID: 81986414}
   BfParticle: {fileID: 159435770}
-  HedgeHogParticle: {fileID: 159435770}
+  HedgeHogParticle: {fileID: 790288530}
   Portal: {fileID: 0}
 --- !u!4 &388168484
 Transform:
@@ -2287,6 +2292,11 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 0
+--- !u!1 &790288530 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2114939129405784144, guid: 9d6766f2e7698324b9856528aaa5faaf, type: 3}
+  m_PrefabInstance: {fileID: 790288526}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &790288535 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3563803585323809287, guid: 9d6766f2e7698324b9856528aaa5faaf, type: 3}
@@ -3152,7 +3162,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1390996983}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a748257f5f3aa6e43a9f11190f7f4eec, type: 3}
   m_Name: 
@@ -3916,6 +3926,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fbc9b6bad04f434d9e1968784173c1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rigidbody: {fileID: 0}
+  grabInteractable: {fileID: 0}
 --- !u!114 &1602769556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3928,6 +3940,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fbc9b6bad04f434d9e1968784173c1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rigidbody: {fileID: 0}
+  grabInteractable: {fileID: 0}
 --- !u!1 &1670569324
 GameObject:
   m_ObjectHideFlags: 0

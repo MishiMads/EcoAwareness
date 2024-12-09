@@ -25,8 +25,8 @@ public class SeedManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-         
-        
+
+        StartCoroutine(removeSeed());
     }
 
 
