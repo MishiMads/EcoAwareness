@@ -7,6 +7,7 @@ public class HedgehogAnimation : MonoBehaviour
 {
     public Animator hedgehogAnim;
 
+    //this just sets the hedgehogs animator to switch between its walking animation and its standing animation.
     public void Start()
     {
         hedgehogAnim.SetBool("IsWalking",true);

@@ -6,16 +6,17 @@ using Random = UnityEngine.Random;
 
 public class footsteps : MonoBehaviour
 {
- public AudioSource walking;
+ public AudioSource walking; //the audio source plays audio in the scene
 
- public AudioClip[] walksound;
- private int currentClipIndex = 0;
+ public AudioClip[] walksound;//a list of footstep audio sounds
+ //private int currentClipIndex = 0;
 
- public float movementThreshold = 0.01f;
- private Vector3 lastPosition;
+ public float movementThreshold = 0.01f; //how far the player has to move each frame to trigger a foot sound
+ private Vector3 lastPosition; //recording the position of the players position last frame for comparison
 
- private float timeSinceLastStep = 0f;
- private float stepInterval = 0f; 
+ private float timeSinceLastStep = 0f; //how long its been since last time a footstep sounds was started
+ private float stepInterval = 0f; //how long it needs to be before a new foot step sound can be played, this is determind
+ //by the length of the audio  being played
  private void Start()
  {
   lastPosition = transform.position;

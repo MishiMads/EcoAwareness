@@ -16,14 +16,15 @@ public class ImageText
 
 public class Dialogue : MonoBehaviour
 {
-
-    public List<ImageText> ImageList;
-    public TextMeshProUGUI textComponent;
-    public string[] lines;
-    public float textSpeed;
-    public Image imageRender;
+    //this script was originally written with the idea that the dialogue boxes should be able to handle both text and 
+    //images. However in the end only the image part ended up being used. Making large parts of this script superfluous
+    public List<ImageText> ImageList; //list of images and associated text
+    public TextMeshProUGUI textComponent; //text field
+    public string[] lines; //list of dialogue
+    public float textSpeed; //how fast each letter should be written
+    public Image imageRender; //where images are rendered 
     
-    public int index;
+    public int index; //this is what line is currently being read
 
     private InputAction nextLineAction; //i need this for the input system to work
 
@@ -33,7 +34,8 @@ public class Dialogue : MonoBehaviour
 
     private void Awake()
     {
-        //this lets me call the OnNextLinePressed() function by pressing b
+        //this lets me call the OnNextLinePressed() function by pressing b, used for testing, not used in the final build
+        //on account of it being vr
         nextLineAction = new InputAction(binding: "<Keyboard>/b"); 
         nextLineAction.performed += ctx => OnNextLinePressed();
     }
@@ -113,22 +115,24 @@ public class Dialogue : MonoBehaviour
             imageToLoad = null;
             textComponent.text = string.Empty;
             imageRender.sprite = null;
-            foreach (var ImageText in ImageList)
+            foreach (var ImageText in ImageList) //this check if the line matches the string attached to one of the images
+            //if it does it then instead of writting the line it renders the image instead
             {
                 if (lines[index] == ImageText.text)
                 {
                     imageToLoad = ImageText.image;
-                    //index++;
+                    //break ends the loop if a matching  image is found
                     break;
                 }
 
                
             }
-
+            //this line loads an image if one has been found
             if (imageToLoad!=null)
             {
                 pressentImage(imageToLoad);
             }
+            //this one writes the line out if no image was found
             else
             {
                 StartCoroutine(TypeLine());

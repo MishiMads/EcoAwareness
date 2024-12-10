@@ -8,7 +8,7 @@ public class PortalScript : MonoBehaviour
 {
  private int EndSceneIndex = 3;
     
-
+//this script simply sends the player to the ending scene when they enter a trigger collider
  private void OnTriggerEnter(Collider other)
  {
         Debug.Log("The Portal has detected a collision");

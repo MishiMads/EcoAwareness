@@ -9,6 +9,9 @@ public class BFAnimation : MonoBehaviour
     public float WalkingAnimationSpeed;
     public float TalkingAnimationSpeed;
     
+    //this script changes the animaltion speed of the butterfly's animation when the play enters or leaves the trigger
+    //collider, the 2 speeds are defined in the animator, with the talkingspeed being slower than the walking speed
+    
     private void OnTriggerEnter(Collider other)
     {
         //Debug.Log("collision");

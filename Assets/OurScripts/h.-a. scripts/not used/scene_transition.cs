@@ -30,15 +30,19 @@ public class scene_transition : MonoBehaviour
         Debug.Log("scene loaded");
         StartCoroutine(Fade(FadeDirection.Out));
     }
+    
+    //this function makes the fade in effect happen when this script  is first activated and it also allows the 
+    //onSceneLoad function to work
     void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
         StartCoroutine(Fade(FadeDirection.Out));
     }
     
+    
     void OnDisable()
     {
-        //Im supposed to do this to avoid memory leaks
+        //Im supposed to do this to avoid memory leaks, when the script is no longer used.
         SceneManager.sceneLoaded -= OnSceneLoaded;  
     }
     

@@ -49,8 +49,10 @@ public class BeeAnimation : MonoBehaviour
             movingUp = !movingUp;
             timer = 0.0f;
         } 
-        //this is bassicly just a shorter version of an if statement
+        //this is bassicly just a shorter version of an if statement, depeding one weather movingUp is true or false
+        //the direction value will be positive or negative
         float direction = movingUp ? 1.0f : -1.0f;
+        //this moves the be up at speed equal to the direction, then
         transform.position += Vector3.up * (direction * speed * Time.deltaTime);
     }
 }

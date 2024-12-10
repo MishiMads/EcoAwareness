@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class UIFloat : MonoBehaviour
 {
-
+    
+    //when this script was originally made the speechbubble was a screen space render rather than a world space render
+    //like it is now.
+    
     public Transform target;// The target GameObject the UI element will float above
     public Vector3 worldOffset = new Vector3(0, 10, 0); // Offset to position UI above target
     public Transform UItransform; // Transform of the UI element

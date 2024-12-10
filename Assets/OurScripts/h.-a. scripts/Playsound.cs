@@ -8,8 +8,9 @@ using UnityEngine;
 public class Playsound : MonoBehaviour
 {
     public AudioSource audioSource;
-    public AudioClip sound1;
-    public AudioClip sound2;
+    public AudioClip sound1; //sound to be played upon entering
+    public AudioClip sound2; //song to be played upon leaving
+    //originally the preceding sounds where different, in the final version its the same sound
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))

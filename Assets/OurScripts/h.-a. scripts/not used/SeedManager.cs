@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SeedManager : MonoBehaviour
 {
-
+    // this script is not being used, its functionallity was intergrated into futureplants
     public GameObject BeeSeed;
     public GameObject ButteflySeed;
     public GameObject HedgeHogSeed;

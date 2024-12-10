@@ -10,12 +10,12 @@ public class patrol : MonoBehaviour
     
     //the start position is the position of the npc when the game starts
     private Vector3 StartPosition;
-    private bool moveforward = true;
-    private bool move = true;
-    private Vector3 goalPosition;
+    private bool moveforward = true; //weather the animal is walking towards the goal or start position
+    private bool move = true; //weather the animal is moving
+    private Vector3 goalPosition; //where the animal will walk to
     //this gameobject is what the npc will walk toward from its start position
-    public GameObject goal;
-    private GameObject LookingAt;
+    public GameObject goal; //an object placed to designate the goal position
+    private GameObject LookingAt; //the player that the animal will look at
     void Start()
     {
         //recording positions. Note you cannot curently change what positions the npc walk between while the game is running
@@ -28,7 +28,7 @@ public class patrol : MonoBehaviour
     {
         if (move)
         { 
-            //here is where movement is handle using transform position
+            //here is where movement is handle using transform position, it moves between the goal and start position
             switch (moveforward)
             {
                 case true:
